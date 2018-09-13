@@ -1,99 +1,220 @@
+html {
+	font-size: 10px;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
 body {
- 	background: black;
-   
+   background:#000;
+   padding-top: 20px;
+}
+.wrapper {
+	margin: 0 auto;
+	width:920px;
 }
 .logo {
-	margin-left: 23%;
-	margin-top: 5%;
+	width: 100%;
 	}
-	.photo {
-		margin-left:55%;
-		margin-top:13%;
-	}
-.zagolovok {
-	color: white;
-	font-size: 25px;
-	font-family:georgia;
-	
+.logo img 
+{
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;	
 }
-p {
-	color: white;
+.features {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
 }
-.z {
-	color: white;
-	font-size: 15px;
-	font-family: arial;
+.features .feature {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	margin: 50px 0;
 }
-.kolonka1 {
-	margin-top: -20%;
-	margin-left: 18%;
+.features .feature .feature-image {
+	cursor: pointer;
+}
+.features .feature .feature-image img {
+	width: 250px;
+	transition: .5s;
+}
+.features .feature .feature-image img:hover {
+	transform: scale(1.1) rotate(10deg);
+}
+.features .feature:nth-child(odd) {
+	flex-direction: row-reverse;
 }
 
- .vizitka {
-  	margin-top:15%;
-  	margin-left:10%;
-  }
-.kolonka2 {
-	margin-left: 60%;
-	margin-top:-19%;
+.features .feature:nth-child(odd) .about {
+	text-align: right;
 }
-.poligrafia {
-	margin-top:20%;
-	margin-left: 55%;
+
+.features .feature:nth-child(odd) .btn-primary {
+	float: right;
 }
-.kolonka3 {
-	margin-top:-19%;
-	margin-left:18%;
-}
-.magnitik {
-	margin-left:10%;
-	margin-top:15%;
-}
-.kolonka4 {
-	margin-top:-25%;
-	margin-left:55%;
-}
-.pechat {
-	margin-top:20%;
-	margin-left:55%;
-}
-.kolonka5 {
- 	margin-top:-18%;
-	margin-left:15%;
-}
-.kontakt {
+
+ 
+
+.features .feature .about .caption {
 	text-align: center;
-	margin-top:17%;
-	font-size: 50px;
-	font-family: Georgia;
+	font-size: 4rem;
 }
-#kontakt-kolonka {
-	margin-left:18%;
-	margin-top:8%;
-	font-size:15px;
-	font-family:arial;
+
+.features .feature .about .description {
+	font-size: 1.5rem;
 }
-.telephon {
-	font-size:23px;
-	font-family:Nord sans-serif;
+
+.features .feature .about {
+	width: 500px;
 }
-.karta {
-	margin-top:-25%;
-	margin-left:50%;
+
+.features .feature .btn-primary {
+	display: block;
+	width: 150px;
+	height: 40px;
+	background-color: #fff;
+	text-decoration: none;
+	font-size: 1.3rem;
+	border-radius: 20px;
+	font-weight: 900;
+	line-height: 40px;
+	margin-top: 30px;
+	text-align: center;
+	color: #000;
 }
-.trubka {
-	margin-top:-10.5%;
-	margin-left:-5%;
+
+
+
+.contacts {
+	width: 100%;
+	color: #fff;
+	text-align: center;
 }
-.pochta {
-	margin-top:1%;
-	margin-left:-5%;
+.contacts .info {
+	display: inline-block;
+	text-align: left;
 }
-.VK {
-	margin-top:5%;
-	margin-left:10%;
+.contacts .info .mail i,.contacts .info .phone i{
+margin-right: 10px;
 }
-.Instagram {
-	margin-top:-8.3%;
-	margin-left:0%;
+.map {
+	display: inline-block;
+}
+.contacts .jc-c{
+	display: flex;
+	justify-content: space-between;
+}
+.contacts .social-icons {
+	display: flex;
+}
+.contacts .social-icons i.vk {
+	margin-left: 30px;
+}
+.contacts .social-icons i{
+	font-size: 6rem;
+}
+.contacts h2 {
+	font-size: 4rem;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+.contacts p {
+	font-size: 1.5rem;
+}
+.contacts a {
+	font-size: 1.7rem;
+	margin: 10px 0;
+	display: block;
+	text-align: left;
+	color: #ededed;
+	text-decoration: underline;
+}
+
+
+
+
+
+@media (max-width: 955px) {
+		.wrapper {
+		width: 770px;	
+	}
+	.features .feature {
+	width: 100%;
+}
+}
+
+@media (max-width:840px) {
+	.wrapper {
+		width: 100%;
+	}
+	.features .feature {
+	max-width: 100%;
+	flex-direction: column;
+	text-align: center;
+	margin: 30px 0;
+}
+.features .feature:nth-child(odd) {
+	flex-direction: column;
+}
+
+
+.features .feature:nth-child(odd) .about {
+	text-align: center;
+}
+.features .feature .btn-primary {
+	float: none;
+	margin: 40px auto;
+}
+.features .feature:nth-child(odd) .btn-primary {
+	float: none;
+}
+
+.features .feature:nth-child(even) .feature-image{
+	margin-left: 0;
+	margin-right: 0;
+}
+.features .feature:nth-child(odd) .feature-image{
+	margin-right: 0;
+	margin-left: 0;
+}
+.features .feature .about {
+	max-width: 100%;
+}
+.features .feature .feature-image img {
+	max-width: 100%;
+}
+.features .feature .feature-image img:hover {
+	transform: scale(1);
+}
+.contacts .jc-c{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.contacts .info {
+	display: inline-block;
+	text-align: left;
+	margin: 40px 0;
+}
+}
+
+@media (max-width:380px) {
+	html {
+	font-size: 10px;
+}
+.features .feature .about .caption {
+	display: inline;
+	text-align: center;
+	font-size: 2.4rem;
+	margin-bottom: 15px;
+}
+.features .feature .about .description {
+	font-size: 1.2rem;
+}
 }
