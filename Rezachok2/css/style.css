@@ -1,0 +1,220 @@
+html {
+	font-size: 10px;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+   background:#000;
+   padding-top: 20px;
+}
+.wrapper {
+	margin: 0 auto;
+	width:920px;
+}
+.logo {
+	width: 100%;
+	}
+.logo img 
+{
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;	
+}
+.features {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+.features .feature {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	margin: 50px 0;
+}
+.features .feature .feature-image {
+	cursor: pointer;
+}
+.features .feature .feature-image img {
+	width: 250px;
+	transition: .5s;
+}
+.features .feature .feature-image img:hover {
+	transform: scale(1.1) rotate(10deg);
+}
+.features .feature:nth-child(odd) {
+	flex-direction: row-reverse;
+}
+
+.features .feature:nth-child(odd) .about {
+	text-align: right;
+}
+
+.features .feature:nth-child(odd) .btn-primary {
+	float: right;
+}
+
+ 
+
+.features .feature .about .caption {
+	text-align: center;
+	font-size: 4rem;
+}
+
+.features .feature .about .description {
+	font-size: 1.5rem;
+}
+
+.features .feature .about {
+	width: 500px;
+}
+
+.features .feature .btn-primary {
+	display: block;
+	width: 150px;
+	height: 40px;
+	background-color: #fff;
+	text-decoration: none;
+	font-size: 1.3rem;
+	border-radius: 20px;
+	font-weight: 900;
+	line-height: 40px;
+	margin-top: 30px;
+	text-align: center;
+	color: #000;
+}
+
+
+
+.contacts {
+	width: 100%;
+	color: #fff;
+	text-align: center;
+}
+.contacts .info {
+	display: inline-block;
+	text-align: left;
+}
+.contacts .info .mail i,.contacts .info .phone i{
+margin-right: 10px;
+}
+.map {
+	display: inline-block;
+}
+.contacts .jc-c{
+	display: flex;
+	justify-content: space-between;
+}
+.contacts .social-icons {
+	display: flex;
+}
+.contacts .social-icons i.vk {
+	margin-left: 30px;
+}
+.contacts .social-icons i{
+	font-size: 6rem;
+}
+.contacts h2 {
+	font-size: 4rem;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+.contacts p {
+	font-size: 1.5rem;
+}
+.contacts a {
+	font-size: 1.7rem;
+	margin: 10px 0;
+	display: block;
+	text-align: left;
+	color: #ededed;
+	text-decoration: underline;
+}
+
+
+
+
+
+@media (max-width: 955px) {
+		.wrapper {
+		width: 770px;	
+	}
+	.features .feature {
+	width: 100%;
+}
+}
+
+@media (max-width:840px) {
+	.wrapper {
+		width: 100%;
+	}
+	.features .feature {
+	max-width: 100%;
+	flex-direction: column;
+	text-align: center;
+	margin: 30px 0;
+}
+.features .feature:nth-child(odd) {
+	flex-direction: column;
+}
+
+
+.features .feature:nth-child(odd) .about {
+	text-align: center;
+}
+.features .feature .btn-primary {
+	float: none;
+	margin: 40px auto;
+}
+.features .feature:nth-child(odd) .btn-primary {
+	float: none;
+}
+
+.features .feature:nth-child(even) .feature-image{
+	margin-left: 0;
+	margin-right: 0;
+}
+.features .feature:nth-child(odd) .feature-image{
+	margin-right: 0;
+	margin-left: 0;
+}
+.features .feature .about {
+	max-width: 100%;
+}
+.features .feature .feature-image img {
+	max-width: 100%;
+}
+.features .feature .feature-image img:hover {
+	transform: scale(1);
+}
+.contacts .jc-c{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.contacts .info {
+	display: inline-block;
+	text-align: left;
+	margin: 40px 0;
+}
+}
+
+@media (max-width:380px) {
+	html {
+	font-size: 10px;
+}
+.features .feature .about .caption {
+	display: inline;
+	text-align: center;
+	font-size: 2.4rem;
+	margin-bottom: 15px;
+}
+.features .feature .about .description {
+	font-size: 1.2rem;
+}
+}
